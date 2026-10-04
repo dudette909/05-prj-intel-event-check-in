@@ -350,6 +350,23 @@ select {
   color: #475569;
 }
 
+.team-members {
+  list-style: none;
+  margin-top: 8px;
+  padding: 0;
+  text-align: left;
+}
+
+.team-members li {
+  padding: 6px 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #334155;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero {

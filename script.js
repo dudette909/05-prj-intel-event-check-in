@@ -46,6 +46,12 @@ form.addEventListener("submit", function (event) {
         powerCount.textContent = parseInt(powerCount.textContent || 0) + 1;
         break;
     }
+
+    const teamMembers = document.getElementById(`${teamName}Members`);
+    const attendeeItem = document.createElement("li");
+    attendeeItem.textContent = name;
+    teamMembers.appendChild(attendeeItem);
+
     greeting.style.display = `flex`;
     greeting.textContent = `${name}, welcome to ${team}!`;
   }
