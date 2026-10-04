@@ -29,6 +29,7 @@ Update the text inside a span to show the current attendee count.
 ## Update the width of a progress bar using a percentage
 
 Change the width of a progress bar based on the calculated progress.
+# done
 
 ## Update the correct team’s count on the page
 

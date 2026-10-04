@@ -2,10 +2,12 @@
 const form = document.getElementById("checkInForm");
 const nameInput = document.getElementById("attendeeName");
 const teamSele = document.getElementById("teamSelect");
-const progBar = document.getElementById("progress-bar");
+const progBar = document.getElementById("progressBar");
+const attendeeNum = document.getElementById("attendeeCount");
 
 let count = 0;
 const maxCount = 50;
+let percent = 0;
 
 // form submissions listener
 form.addEventListener("submit", function (event) {
@@ -14,7 +16,13 @@ form.addEventListener("submit", function (event) {
   const team = teamSele.selectedOptions[0].text;
 
   console.log(name, team);
+  if (count < maxCount) {
+    count++;
+    percent = (count / maxCount) * 100;
 
-  count++;
-  console.log("Current number of check-ins: ", count);
+    progBar.style.width = `${percent}%`;
+  }
+
+  // resets the form so it becomes blank for the next person
+  this.reset();
 });
